@@ -1,0 +1,9 @@
+@media screen and (width: 390px) {
+    .mobile_content {display: block;}
+    .desktop_content {display: none;}
+}
+
+@media screen and (width: 1368px) {
+    .mobile_content {display: none;}
+    .desktop_content {display: block;}
+}
