@@ -1,53 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const menuButton = document.getElementById('menuButton');
-    const menuIcon = document.getElementById('menuIcon');
-    const menuOverlay = document.getElementById('menuOverlay');
-  
-    const footerLinks = document.querySelector('.links');
-    const backButton = document.getElementById('backToPage');
+    const links = document.querySelector('.links');
     const divider = document.querySelector('.divider');
-
-    const productToggle = document.querySelector('.product_with_submenu');
-    const arrowIcon = productToggle.querySelector('.arrow_icon');
-    const subMenu = productToggle.nextElementSibling;
-    const extendedMenuNav = document.getElementById('extendedMenu');
+    
+    const productMenu = document.querySelector('.product_with_submenu');
+    const arrowIcon = productMenu.querySelector('.arrow_icon');
+    const subMenu = productMenu.nextElementSibling;
   
-    function toggleMenu(){
+    function openMenu(){
       const isHidden = menuOverlay.classList.toggle('hidden');
-  
-      if (isHidden){
+
+      mainContent.classList.toggle('hidden');
+      links.classList.toggle('hidden');
+      divider.classList.toggle('hidden');
+    
+      if (isHidden) {
         menuIcon.src = 'menuicon.svg';
-  
-        footerLinks.classList.remove('hidden');
-        backButton.classList.add('hidden');
-        backButton.classList.remove('fixedbottom');
-        subMenu.classList.add('hidden');
-        extendedMenuNav.classList.remove('submenu-open');
-        arrowIcon.src = 'arrowdown.svg';
-        divider.classList.remove('hidden');
-      }else{
+        backToPage.classList.add('hidden');
+      } else {
         menuIcon.src = 'closeicon.svg';
-        footerLinks.classList.add('hidden');
-        backButton.classList.remove('hidden');
-        backButton.classList.add('fixedbottom');
-        divider.classList.add('hidden');
+        backToPage.classList.remove('hidden');
       }
     }
-    menuButton.addEventListener('click', toggleMenu);
-    backButton.addEventListener('click', toggleMenu);
+    menuButton.addEventListener('click', openMenu);
+    backToPage.addEventListener('click', openMenu);
 
-    subMenu.classList.add('hidden');
-
-    function toggleSubMenu(){
+    function openSubMenu(){
       const hidden = subMenu.classList.toggle('hidden');
-
+ 
       if(hidden){
-        extendedMenuNav.classList.remove('submenu-open');
+        extendedMenu.classList.remove('submenu_opened');
         arrowIcon.src = 'arrowdown.svg';
       }else{
-        extendedMenuNav.classList.add('submenu-open');
+        extendedMenu.classList.add('submenu_opened');
         arrowIcon.src = 'arrowup.svg';
       }
     }
-    productToggle.addEventListener('click', toggleSubMenu);
+    productMenu.addEventListener('click', openSubMenu);
+
   });

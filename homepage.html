@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="styles.css">
     
     <script src="menu.js" defer></script>
-    
+
+    <script src="backtotop.js" defer></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
@@ -60,26 +62,91 @@
         </nav>
       </div>
 
+      <main id="mainContent" class="page_main">
+        <section class="featured_product">
+          <div class="featured_wrapper">
 
+            <button class="arrow left">
+              <img src="arrowleft.svg">
+            </button>
+      
+            <a href="productpage_2.html" class="featured_image_link">
+              <img class="featured_image" src="nightmare.jpg">
+            </a>
+      
+            <button class="arrow right">
+              <img src="arrowright.svg">
+            </button>
+      
+            <div class="featured_meta">
+              <h2 class="name">Nightmare PCB</h2>
+      
+              <div class="indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+              </div>
+      
+              <button class="featured_button" product_id="3">ADD TO CART</button>
+            </div>
+          </div>
+        </section>
 
+        <section class="new_arrival">
+          <h2 class="section_title">NEW ARRIVAL</h2>
 
+          <div class="arrival_grid">
 
+            <article class="product_card">
+              <div class="card_img_wrapper">
+                <div class="status_label">SALE</div>
+                <img src="maypad.jpg" alt="May Pad">
+              </div>
+              <h3 class="product_name">May Pad</h3>
+              <p class="product_price">$18.00</p>
+              <a class="button learn_more" href="productpage_2.html">LEARN MORE</a>
+              <button class="button add_to_cart" product_id="2">ADD TO CART</button>
+            </article>
 
+            <article class="product_card">
+              <div class="card_img_wrapper">
+                <div class="status_label">OUT OF STOCK</div>
+                <img src="solfergb.jpg" alt="Solfe RGB">
+              </div>
+              <h3 class="product_name">Solfe RGB</h3>
+              <p class="product_price">$75.00</p>
+              <a class="button learn_more" href="productpage_1.html">LEARN MORE</a>
+              <button class="button add_to_cart" product_id="1" disabled>ADD TO CART</button>
+            </article>
 
+            <article class="product_card">
+              <div class="card_img_wrapper">
+                <img src="genuinecherrystabilizer.jpg">
+              </div>
+              <h3 class="product_name">Genuine Cherry Stabilier</h3>
+              <p class="product_price">$2.00</p>
+              <a class="button learn_more" href="productpage_5.html">LEARN MORE</a>
+              <button class="button add_to_cart" product_id="5">ADD TO CART</button>
+            </article>
 
+            <article class="product_card">
+              <div class="card_img_wrapper">
+                <img src="arduinopromicro.jpg">
+              </div>
+              <h3 class="product_name">Arduino Pro Micro</h3>
+              <p class="product_price">$8.50</p>
+              <a class="button learn_more" href="productpage_4.html">LEARN MORE</a>
+              <button class="button add_to_cart" product_id="4">ADD TO CART</button>
+            </article>
 
+          </div>
+        </section>
 
-      <main>
+        <section class="explore_more">
+          <a href="productlistingpage_keyboards.html" class="explore_button">EXPLORE MORE</a>
+        </section>
+
+        <button id="backToTop" class="back_to_top"><img src="backtotopicon.svg">BACK TO TOP</button>
       </main>
-
-
-
-
-
-
-
-
-
 
       <div class="divider"></div>
       
@@ -89,22 +156,14 @@
           <li><a href="faqpage.html">FAQ</a></li>
           <li><a href="contactpage.html">CONTACT</a></li>
           <li><a href="https://www.instagram.com/keyhive_keyboards/">JOIN US</a></li>
+          <li><a href="https://www.instagram.com/keyhive_keyboards/"></a></li>
+          <li><a href="https://www.instagram.com/keyhive_keyboards/"></a></li>
         </ul>
       </footer>
 
       <button id="backToPage" class="back_to_page hidden"><img src="backicon.svg" alt="backicon">BACK TO PAGE</button>
     
     </div>
-
-
-
-
-
-
-
-
-
-
 
 
     <div class = "desktop_content">
