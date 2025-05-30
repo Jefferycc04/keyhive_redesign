@@ -353,3 +353,102 @@ body {
     width: 17px;
     height: 17px;
 }
+
+
+
+
+
+
+
+@media screen and (min-width:1368px) {
+    .desktop_header {
+        position: relative;
+        top: auto;
+        height: 80px;
+        align-items: center;
+        padding: 0 30px;
+    }
+
+    .desktop_logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .desktop_logo img {
+        width: 72px;
+        height: 56px
+    }
+
+    .nav_group {
+        display: flex;
+        align-items: center;
+        gap: 39px;
+    }
+
+    .nav_group a {
+        color: #F5F5F5;
+        text-decoration: none;
+    }
+
+    .nav_group a:hover {
+        color: #FDB447
+    }
+
+    .cart_link img {
+        width: 30px;
+        height: 30px
+    }
+
+    .cart_count {
+        position: absolute;
+        top: 13px;
+        right: 18px;
+        background: #FDB447;
+        color: #F5F5F5;
+        padding: 1px 5px;
+    }
+
+    .page_main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .featured_wrapper {
+        align-items: center;
+    }
+
+    .featured_image {
+        width: 1200px;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .arrival_grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
+
+    .explore_more {
+        padding: 4rem 1rem;
+        padding-top: 0rem;
+    }
+
+    .explore_button {
+        display: block;
+        background: #FDB447;
+        color: #212121;
+        text-decoration: none;
+        text-align: center;
+        padding: 20px;
+        font-size: 15px;
+    }
+
+    .desktop_title {
+        font-size: 20px
+    } 
+
+    .back_to_top {
+        font-size: 15px;
+    }
+}

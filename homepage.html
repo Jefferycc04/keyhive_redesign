@@ -166,11 +166,117 @@
     </div>
 
 
-    <div class = "desktop_content">
-      <h1>DESKTOP</h1>
-    </div>
 
+
+
+
+    <div class = "desktop_content">
+      <header class = "page_header desktop_header">
+        <nav class = "nav_group">
+          <a href="homepage.html">HOME</a>
+          <a href="aboutpage.html">ABOUT KEYHIVE</a>
+          <a href="productlistingpage_keyboards.html">KEYBOARDS</a>
+          <a href="productlistingpage_accessories.html">ACCESSORIES</a>
+          
+        </nav>
+        
+        <a class="desktop_logo" href="homepage.html">
+          <img src="keyhivelogo.png" alt="keyhivelogo">
+        </a>
     
+        <nav class="nav_group">
+          <a href="https://github.com/keyhive/build_guides">BUILD GUIDES</a>
+          <a href="faqpage.html">FAQ</a>
+          <a href="contactpage.html">CONTACT</a>
+          <a href="https://www.instagram.com/keyhive_keyboards/">JOIN US</a>
+          <a class="cart_link" href="cartpage.html">
+            <img src="carticon.svg" alt="cart">
+            <span id="cartCountDesktop" class="cart_count">0</span>
+          </a>
+        </nav>
+      </header>
+
+      <main class="page_main">
+        
+        <section class="featured_product">
+          <div class="featured_wrapper">
+            <button class="arrow left"><img src="arrowleft.svg"></button>
+    
+            <a href="productpage_2.html" class="featured_image_link">
+              <img class="featured_image" src="nightmare.jpg" alt="Nightmare PCB">
+            </a>
+    
+            <button class="arrow right"><img src="arrowright.svg"></button>
+    
+            <div class="featured_meta">
+              <h2 class="name">Nightmare PCB</h2>
+              <div class="indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+              </div>
+              <button class="featured_button" product_id="3">ADD TO CART</button>
+            </div>
+          </div>
+        </section>
+    
+        <section class="new_arrival">
+          <h2 class="section_title desktop_title">NEW ARRIVAL</h2>
+    
+          <div class="arrival_grid">
+
+            <article class="product_card">
+              <div class="card_img_wrapper">
+                <div class="status_label">SALE</div>
+                <img src="maypad.jpg" alt="May Pad">
+              </div>
+              <h3 class="product_name">May Pad</h3>
+              <p class="product_price">$18.00</p>
+              <a class="button learn_more" href="productpage_2.html">LEARN MORE</a>
+              <button class="button add_to_cart" product_id="2">ADD TO CART</button>
+            </article>
+
+            <article class="product_card">
+              <div class="card_img_wrapper">
+                <div class="status_label">OUT OF STOCK</div>
+                <img src="solfergb.jpg" alt="Solfe RGB">
+              </div>
+              <h3 class="product_name">Solfe RGB</h3>
+              <p class="product_price">$75.00</p>
+              <a class="button learn_more" href="productpage_1.html">LEARN MORE</a>
+              <button class="button add_to_cart" product_id="1" disabled>ADD TO CART</button>
+            </article>
+    
+            <article class="product_card">
+              <div class="card_img_wrapper">
+                <img src="genuinecherrystabilizer.jpg" alt="Genuine Cherry Stabiliser">
+              </div>
+              <h3 class="product_name">Genuine Cherry Stabiliser</h3>
+              <p class="product_price">$2.00</p>
+              <a class="button learn_more" href="productpage_5.html">LEARN MORE</a>
+              <button class="button add_to_cart" product_id="5">ADD TO CART</button>
+            </article>
+    
+            <article class="product_card">
+              <div class="card_img_wrapper">
+                <img src="arduinopromicro.jpg" alt="Arduino Pro Micro">
+              </div>
+              <h3 class="product_name">Arduino Pro Micro</h3>
+              <p class="product_price">$8.50</p>
+              <a class="button learn_more" href="productpage_4.html">LEARN MORE</a>
+              <button class="button add_to_cart" product_id="4">ADD TO CART</button>
+            </article>
+          </div>
+        </section>
+    
+        <section class="explore_more">
+          <a href="productlistingpage_keyboards.html" class="explore_button">EXPLORE MORE</a>
+        </section>
+    
+        <button id="backToTop" class="back_to_top">
+          <img src="backtotopicon.svg" alt="">BACK TO TOP
+        </button>
+      </main>
+    </div>
 
   </body>
 </html>

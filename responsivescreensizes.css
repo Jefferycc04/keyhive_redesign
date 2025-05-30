@@ -3,7 +3,7 @@
     .desktop_content {display: none;}
 }
 
-@media screen and (width: 1368px) {
+@media screen and (min-width: 1368px) {
     .mobile_content {display: none;}
     .desktop_content {display: block;}
 }
