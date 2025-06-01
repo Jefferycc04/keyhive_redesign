@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelector('.links');
-    const divider = document.querySelector('.divider');
+    const dividers = document.querySelectorAll('.divider');
     
     const productMenu = document.querySelector('.product_with_submenu');
     const arrowIcon = productMenu.querySelector('.arrow_icon');
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       mainContent.classList.toggle('hidden');
       links.classList.toggle('hidden');
-      divider.classList.toggle('hidden');
+      dividers.forEach(d => d.classList.toggle('hidden'));
     
       if (isHidden) {
         menuIcon.src = 'menuicon.svg';
