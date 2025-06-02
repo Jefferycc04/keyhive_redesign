@@ -4,17 +4,205 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>faqpage</title>
+    
     <link rel="stylesheet" href="responsivescreensizes.css">
+    
     <link rel="stylesheet" href="styles.css">
+    
+    <script src="menu.js" defer></script>
 
+    <script src="backtotop.js" defer></script>
+
+    <script src="productlisting.js" defer></script>
+
+    <script src="productdetail.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
   </head>
+  
   <body>
-    <div class = "mobile_content">
-      <h1>MOBILE</h1>
+    <div class="mobile_content">
+      <header class="page_header">
+        <button id="menuButton" class="header_button">
+          <img id="menuIcon" src="menuicon.svg" alt="menuicon">
+        </button>
+        
+        <a class="header_logo" href="homepage.html">
+          <img src="keyhivelogo.png" alt="keyhivelogo">
+        </a>
+
+        <a class="header_button" href="cartpage.html">
+          <img src="carticon.svg" alt="carticon">
+          <span id="cartCount" class="cartcount">0</span>
+        </a>
+      </header>
+
+      <div id="menuOverlay" class="menu_overlay hidden">
+        <div class="menu_search">
+          <img class="search_icon" src="searchicon.svg" alt="searchicon">
+          <input id="menuSearch" type="text" placeholder="Search our store...">
+        </div>
+        <nav id="extendedMenu" class="extended_menu">
+          <ul>
+            <li><a href="homepage.html">HOME</a></li>
+            <li><a href="aboutpage.html">ABOUT KEYHIVE</a></li>
+            <li class="submenu">
+              <div class="product_with_submenu">
+                <span>PRODUCT</span>
+                <img class="arrow_icon" src="arrowdown.svg" alt="arrowdown">
+              </div>
+              <ul class="extended_submenu hidden">
+                <li><a href="productlistingpage_keyboards.html">KEYBOARDS</a></li>
+                <li><a href="productlistingpage_accessories.html">ACCESSORIES</a></li>
+              </ul>
+            </li>
+            <li><a href="https://github.com/keyhive/build_guides">BUILD GUIDES</a></li>
+            <li><a href="faqpage.html">FAQ</a></li>
+            <li><a href="contactpage.html">CONTACT</a></li>
+            <li><a href="https://www.instagram.com/keyhive_keyboards/">JOIN US</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <main id="mainContent" class="page_main">
+
+        <section class="faq">
+          <h1>FREQUENTLY ASKED QUESTIONS</h1>
+
+          <h3 class="list_heading">Where do you ship from?</h3>
+          <p style="font-size: 13px">Utah, USA</p>
+
+          <h3 class="list_heading">Where do you ship to?</h3>
+          <p style="font-size: 13px">Anywhere in the world (with the exception of a few places that the US has trade embargos with)</p>
+        
+          <h3 class="list_heading">Why do you no longer offer acrylic cases/plates/etc...?</h3>
+          <p style="font-size: 13px">We are working as a company to be more environmentally concious. One of these steps means that we are phasing out products that cannot be recycled and are harmful to the environment.</p>
+        
+          <h3 class="list_heading">What is a Group Buy?</h3>
+          <p style="font-size: 13px">Group buys are limited duration sales that allow people to collectively get a better price on a product by increasing the quantity. This typically means that the order will not ship for some time. Once the Group Buy closes, there will be no refunds. If you have extenuating circumstances, please contact us using the contact form.</p>
+        
+          <h3 class="list_heading">My order shipped but hasn't updated for a long time! What should I do?</h3>
+          <p style="font-size: 13px">If you're in the US, please please contact us using the contact form. If you're outside of the US, please be patient. I have seen orders arrive in a few days and sometimes arrive after a few months. Try contacting your postal service to see if there is anything that you can do. Once it leaves the US, there is very little I can do.</p>
+        
+          <h3 class="list_heading">I am missing parts in my order!</h3>
+          <p style="font-size: 13px">We are very sorry to hear that! Although we are trying our best, we still make mistakes sometimes. We are more than happy to ship you the missing items. Please contact us using the contact form</p>
+        
+          <h3 class="list_heading">How do I build my keyboard?</h3>
+          <p style="font-size: 13px">Check out this handy github repo that we put together! https://github.com/keyhive/build_guides</p>
+
+          <h3 class="list_heading">How do I flash firmware onto my keyboard?</h3>
+          <p style="font-size: 13px">Check out this handy github repo that we put together! https://github.com/keyhive/build_guides. You can also look in the QMK docs here: https://docs.qmk.fm</p>
+
+          <h3 class="list_heading">My Keyboard isn't working!</h3>
+          <p style="font-size: 13px">We're sorry to hear that! This is typically due to faulty soldering, messed up traces in the PCB, or damage during shipping.</p>
+
+          <h3 class="list_heading">When will a product be back in stock?</h3>
+          <p style="font-size: 13px">We try to keep items in stock continually, but it's hard to predict demand. If something is not in stock, you can sign up on the product page to be notified when it comes back.</p>
+
+          <h3 class="list_heading">Are you going to start stocking another product that I like?</h3>
+          <p style="font-size: 13px">Sure! If we don't have it on the site, please contact us using the contact form.</p>
+
+          <h3 class="list_heading">I'm a designer and would like to work with you, how does that typically work?</h3>
+          <p style="font-size: 13px">We are always looking for new and exciting products. Typically we pay designers through royalties. The percentage varies per product but we strive to be fair in our compensation. please contact us using the contact form for more information!</p>
+        </section>
+
+        <button id="backToTop" class="back_to_top"><img src="backtotopicon.svg">BACK TO TOP</button>
+      </main>
+
+      <div class="divider"></div>
+      
+      <footer class="page_footer"> 
+        <ul class="links">
+          <li><a href="https://github.com/keyhive/build_guides">BUILD GUIDES</a></li>
+          <li><a href="faqpage.html">FAQ</a></li>
+          <li><a href="contactpage.html">CONTACT</a></li>
+          <li><a href="https://www.instagram.com/keyhive_keyboards/">JOIN US</a></li>
+          <li><a href="https://www.instagram.com/keyhive_keyboards/"></a></li>
+          <li><a href="https://www.instagram.com/keyhive_keyboards/"></a></li>
+        </ul>
+      </footer>
+
+      <button id="backToPage" class="back_to_page hidden"><img src="backicon.svg" alt="backicon">BACK TO PAGE</button>
     </div>
 
     <div class = "desktop_content">
-      <h1>DESKTOP</h1>
+      <header class = "page_header desktop_header">
+        <nav class = "nav_group">
+          <a href="homepage.html">HOME</a>
+          <a href="aboutpage.html">ABOUT KEYHIVE</a>
+          <a href="productlistingpage_keyboards.html">KEYBOARDS</a>
+          <a href="productlistingpage_accessories.html">ACCESSORIES</a>
+          
+        </nav>
+        
+        <a class="desktop_logo" href="homepage.html">
+          <img src="keyhivelogo.png" alt="keyhivelogo">
+        </a>
+    
+        <nav class="nav_group">
+          <a href="https://github.com/keyhive/build_guides">BUILD GUIDES</a>
+          <a href="faqpage.html">FAQ</a>
+          <a href="contactpage.html">CONTACT</a>
+          <a href="https://www.instagram.com/keyhive_keyboards/">JOIN US</a>
+          <a class="cart_link" href="cartpage.html">
+            <img src="carticon.svg" alt="cart">
+            <span id="cartCountDesktop" class="cart_count">0</span>
+          </a>
+        </nav>
+      </header>
+
+
+      <main class="page_main">
+        <section class="faq">
+            <h1 style="font-size: 30px">FREQUENTLY ASKED QUESTIONS</h1>
+  
+            <h3 class="list_heading">Where do you ship from?</h3>
+            <p>Utah, USA</p>
+            <br>
+            <h3 class="list_heading">Where do you ship to?</h3>
+            <p>Anywhere in the world (with the exception of a few places that the US has trade embargos with)</p>
+            <br>
+            <h3 class="list_heading">Why do you no longer offer acrylic cases/plates/etc...?</h3>
+            <p>We are working as a company to be more environmentally concious. One of these steps means that we are phasing out products that cannot be recycled and are harmful to the environment.</p>
+            <br>
+            <h3 class="list_heading">What is a Group Buy?</h3>
+            <p>Group buys are limited duration sales that allow people to collectively get a better price on a product by increasing the quantity. This typically means that the order will not ship for some time. Once the Group Buy closes, there will be no refunds. If you have extenuating circumstances, please contact us using the contact form.</p>
+            <br>
+            <h3 class="list_heading">My order shipped but hasn't updated for a long time! What should I do?</h3>
+            <p>If you're in the US, please please contact us using the contact form. If you're outside of the US, please be patient. I have seen orders arrive in a few days and sometimes arrive after a few months. Try contacting your postal service to see if there is anything that you can do. Once it leaves the US, there is very little I can do.</p>
+            <br>
+            <h3 class="list_heading">I am missing parts in my order!</h3>
+            <p>We are very sorry to hear that! Although we are trying our best, we still make mistakes sometimes. We are more than happy to ship you the missing items. Please contact us using the contact form</p>
+            <br>
+            <h3 class="list_heading">How do I build my keyboard?</h3>
+            <p>Check out this handy github repo that we put together! https://github.com/keyhive/build_guides</p>
+            <br>
+            <h3 class="list_heading">How do I flash firmware onto my keyboard?</h3>
+            <p>Check out this handy github repo that we put together! https://github.com/keyhive/build_guides. You can also look in the QMK docs here: https://docs.qmk.fm</p>
+            <br>
+            <h3 class="list_heading">My Keyboard isn't working!</h3>
+            <p>We're sorry to hear that! This is typically due to faulty soldering, messed up traces in the PCB, or damage during shipping.</p>
+            <br>
+            <h3 class="list_heading">When will a product be back in stock?</h3>
+            <p>We try to keep items in stock continually, but it's hard to predict demand. If something is not in stock, you can sign up on the product page to be notified when it comes back.</p>
+            <br>
+            <h3 class="list_heading">Are you going to start stocking another product that I like?</h3>
+            <p>Sure! If we don't have it on the site, please contact us using the contact form.</p>
+            <br>
+            <h3 class="list_heading">I'm a designer and would like to work with you, how does that typically work?</h3>
+            <p>We are always looking for new and exciting products. Typically we pay designers through royalties. The percentage varies per product but we strive to be fair in our compensation. please contact us using the contact form for more information!</p>
+        </section>
+
+        <br>
+
+        <br>
+    
+        <button id="backToTop" class="back_to_top">
+          <img src="backtotopicon.svg">BACK TO TOP
+        </button>
+      </main>
     </div>
 
   </body>

@@ -666,7 +666,14 @@ body {
     margin: 2rem auto;
 }
 
+.faq h1 {
+    color:#FDB447;
+    text-align: center;
+}
 
+.faq p{
+    color: #F5F5F5;
+}
 
 
 @media screen and (min-width:1368px) {
@@ -938,6 +945,14 @@ body {
         width: 50%;
         max-width: 720px;
         margin: 3rem auto;
+    }
+
+    .faq h3 {
+        font-size: 25px;
+    }
+
+    .faq p {
+        font-size: 20px;
     }
 
 
