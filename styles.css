@@ -675,6 +675,79 @@ body {
     color: #F5F5F5;
 }
 
+.contact {
+    
+    padding: 1rem 0;
+}
+
+.contact h1 {
+    color: #FDB447;
+    text-align: center;
+    font-size: 24px;
+    margin: 0 0 1rem;
+}
+
+.contact h3 {
+    color: #F5F5F5;
+    font-size: 12px;
+    margin: 1rem 0 .4rem;
+}
+
+.contact_input {
+
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto .8rem;
+    padding: .6rem .8rem;
+    font-family: Tiny5;
+    font-size: 11px;
+    border: none;
+}
+
+textarea.contact_input {
+    resize: vertical;
+}
+
+.submit_btn {
+    display: block;
+    width: 80%;
+    max-width: 340px;
+    margin: 1rem auto 2rem;
+    padding: 12px 0;
+    background: #FDB447;
+    color: #212121;
+    font-family: Tiny5;
+    font-size: 14px;
+    border: none;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.submit_btn.success {
+    background: #3CB371;
+    color: #F5F5F5;
+}
+
+.submit_btn.error {
+    background: #A52A2A;
+    color: #F5F5F5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width:1368px) {
     .desktop_header {
@@ -955,5 +1028,37 @@ body {
         font-size: 20px;
     }
 
+    .desktop_content .contact {
+        max-width: 2000px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 2rem 0 3rem;
+    }
 
+    .desktop_content .contact h1 {
+        color: #FDB447;
+        font-size: 30px;
+        margin: 0 0 2rem;
+    }
+
+    .desktop_content .contact h3 {
+        font-size: 20px;
+        margin: 1.5rem 0 .6rem;
+    }
+
+    .desktop_content .contact_input {
+        max-width: 700px;
+        font-size: 16px;
+        padding: 1rem 1.2rem;
+    }
+
+    textarea.contact_input {
+        min-height: 100px;
+    }
+
+    .desktop_content .submit_btn {
+        max-width: 480px;
+        font-size: 20px;
+        padding: 18px 0; 
+    }
 }

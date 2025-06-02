@@ -4,17 +4,165 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>contactpage</title>
+    
     <link rel="stylesheet" href="responsivescreensizes.css">
+    
     <link rel="stylesheet" href="styles.css">
+    
+    <script src="menu.js" defer></script>
 
+    <script src="backtotop.js" defer></script>
+
+    <script src="productlisting.js" defer></script>
+
+    <script src="productdetail.js" defer></script>
+
+    <script src="contact.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
   </head>
+  
   <body>
-    <div class = "mobile_content">
-      <h1>MOBILE</h1>
+    <div class="mobile_content">
+      <header class="page_header">
+        <button id="menuButton" class="header_button">
+          <img id="menuIcon" src="menuicon.svg" alt="menuicon">
+        </button>
+        
+        <a class="header_logo" href="homepage.html">
+          <img src="keyhivelogo.png" alt="keyhivelogo">
+        </a>
+
+        <a class="header_button" href="cartpage.html">
+          <img src="carticon.svg" alt="carticon">
+          <span id="cartCount" class="cartcount">0</span>
+        </a>
+      </header>
+
+      <div id="menuOverlay" class="menu_overlay hidden">
+        <div class="menu_search">
+          <img class="search_icon" src="searchicon.svg" alt="searchicon">
+          <input id="menuSearch" type="text" placeholder="Search our store...">
+        </div>
+        <nav id="extendedMenu" class="extended_menu">
+          <ul>
+            <li><a href="homepage.html">HOME</a></li>
+            <li><a href="aboutpage.html">ABOUT KEYHIVE</a></li>
+            <li class="submenu">
+              <div class="product_with_submenu">
+                <span>PRODUCT</span>
+                <img class="arrow_icon" src="arrowdown.svg" alt="arrowdown">
+              </div>
+              <ul class="extended_submenu hidden">
+                <li><a href="productlistingpage_keyboards.html">KEYBOARDS</a></li>
+                <li><a href="productlistingpage_accessories.html">ACCESSORIES</a></li>
+              </ul>
+            </li>
+            <li><a href="https://github.com/keyhive/build_guides">BUILD GUIDES</a></li>
+            <li><a href="faqpage.html">FAQ</a></li>
+            <li><a href="contactpage.html">CONTACT</a></li>
+            <li><a href="https://www.instagram.com/keyhive_keyboards/">JOIN US</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <main id="mainContent" class="page_main">
+        <section class="contact">
+          <h1>CONTACT US</h1>
+          <div class="divider"></div>
+
+          <br>
+
+          <h3>NAME (REQUIRED)</h3>
+          <input class="contact_input" id="nameField"   type="text" placeholder="First & Last name">
+
+          <h3>SUBJECT (REQUIRED)</h3>
+          <input class="contact_input" id="subjectField" type="text" placeholder="What’s this about?">
+
+          <h3>EMAIL (REQUIRED)</h3>
+          <input class="contact_input" id="emailField"   type="email" placeholder="example@mail.com">
+
+          <h3>MESSAGE (REQUIRED)</h3>
+          <textarea class="contact_input" id="msgField" rows="4" placeholder="Tell us more…"></textarea>
+
+          <button id="submitBtn" class="submit_btn">SUBMIT</button>
+        </section>
+
+        <button id="backToTop" class="back_to_top"><img src="backtotopicon.svg">BACK TO TOP</button>
+      </main>
+
+      <div class="divider"></div>
+      
+      <footer class="page_footer"> 
+        <ul class="links">
+          <li><a href="https://github.com/keyhive/build_guides">BUILD GUIDES</a></li>
+          <li><a href="faqpage.html">FAQ</a></li>
+          <li><a href="contactpage.html">CONTACT</a></li>
+          <li><a href="https://www.instagram.com/keyhive_keyboards/">JOIN US</a></li>
+          <li><a href="https://www.instagram.com/keyhive_keyboards/"></a></li>
+          <li><a href="https://www.instagram.com/keyhive_keyboards/"></a></li>
+        </ul>
+      </footer>
+
+      <button id="backToPage" class="back_to_page hidden"><img src="backicon.svg" alt="backicon">BACK TO PAGE</button>
     </div>
 
     <div class = "desktop_content">
-      <h1>DESKTOP</h1>
+      <header class = "page_header desktop_header">
+        <nav class = "nav_group">
+          <a href="homepage.html">HOME</a>
+          <a href="aboutpage.html">ABOUT KEYHIVE</a>
+          <a href="productlistingpage_keyboards.html">KEYBOARDS</a>
+          <a href="productlistingpage_accessories.html">ACCESSORIES</a>
+          
+        </nav>
+        
+        <a class="desktop_logo" href="homepage.html">
+          <img src="keyhivelogo.png" alt="keyhivelogo">
+        </a>
+    
+        <nav class="nav_group">
+          <a href="https://github.com/keyhive/build_guides">BUILD GUIDES</a>
+          <a href="faqpage.html">FAQ</a>
+          <a href="contactpage.html">CONTACT</a>
+          <a href="https://www.instagram.com/keyhive_keyboards/">JOIN US</a>
+          <a class="cart_link" href="cartpage.html">
+            <img src="carticon.svg" alt="cart">
+            <span id="cartCountDesktop" class="cart_count">0</span>
+          </a>
+        </nav>
+      </header>
+
+
+      <main class="page_main">
+        <section class="contact">
+          <h1>CONTACT US</h1>
+          <div class="divider"></div>
+
+          <br>
+
+          <h3>NAME (REQUIRED)</h3>
+          <input class="contact_input" id="nameFieldDesktop"   type="text" placeholder="First & Last name">
+
+          <h3>SUBJECT (REQUIRED)</h3>
+          <input class="contact_input" id="subjectFieldDesktop" type="text" placeholder="What’s this about?">
+
+          <h3>EMAIL (REQUIRED)</h3>
+          <input class="contact_input" id="emailFieldDesktop"   type="email" placeholder="example@mail.com">
+
+          <h3>MESSAGE (REQUIRED)</h3>
+          <textarea class="contact_input" id="msgFieldDesktop" rows="4" placeholder="Tell us more…"></textarea>
+          <br>
+          <br>
+          <button id="submitBtnDesktop" class="submit_btn">SUBMIT</button>
+        </section>
+    
+        <button id="backToTop" class="back_to_top">
+          <img src="backtotopicon.svg">BACK TO TOP
+        </button>
+      </main>
     </div>
 
   </body>
