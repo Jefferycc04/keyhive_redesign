@@ -15,6 +15,8 @@
 
     <script src="productlisting.js" defer></script>
 
+    <script src="productdetail.js" defer></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
@@ -65,104 +67,116 @@
       </div>
 
       <main id="mainContent" class="page_main">
-
-        <section class="new_arrival">
-          <h2 class="section_title">ACCESSORIES</h2>
-          
-
+        <br>
+        <div class="product_head">
+          <div class="product_info">
+            <h2 class="section_title">SOFLE RGB</h2>
+            <h3 class="product_price" style="font-size: 15px">$75.00</h3>
+          </div>
+        
           <div class="listing_controls">
-            <button class="control_button" data-type="view">
-              VIEW
-              <img class="arrow_icon" src="arrowdown.svg">
-            </button>
-
             <button class="control_button" data-type="sort">
-              SORT
-              <img class="arrow_icon" src="arrowdown.svg">
+              TYPE <img class="arrow_icon" src="arrowdown.svg">
             </button>
-
             <button class="control_button" data-type="filter">
-              FILTER
-              <img class="arrow_icon" src="arrowdown.svg">
+              COLOR <img class="arrow_icon" src="arrowdown.svg">
             </button>
           </div>
+        </div>
 
-          <div class="divider"></div>
+        <div class="divider"></div>
 
-          <ul id="viewMenu" class="control_menu hidden">
-            <li data-view="horizontal" class="selected">HORIZONTAL</li>
-            <li data-view="vertical">VERTICAL</li>
+        <ul id="sortMenu" class="control_menu hidden">
+          <li class="selected">DEFAULT</li>
+        </ul>
+        
+        <ul id="filterMenu" class="control_menu hidden">
+          <li class="selected">DEFAULT</li>
+        </ul>
+        
+        <div id="subDivider" class="sub_divider hidden"></div>
+
+        <br>
+
+
+        <section class="product_gallery">
+          <figure class="main_frame">
+            <img id="mainImg" src="solfergb.jpg" class="main_img">
+          </figure>
+          <ul class="thumb_strip">
+            <li><img src="solfergb.jpg" data-full="solfergb.jpg" alt=""></li>
+            <li><img src="soflergb_2.jpg" data-full="soflergb_2.jpg" alt=""></li>
+            <li><img src="soflergb_3.jpg" data-full="soflergb_3.jpg" alt=""></li>
+            <li><img src="soflergb_4.jpg" data-full="soflergb_4.jpg" alt=""></li>
+            <li><img src="soflergb_5.jpg" data-full="soflergb_5.jpg" alt=""></li>
           </ul>
-          
-          <ul id="sortMenu" class="control_menu hidden">
-            <li class="selected">DEFAULT</li>
-            <li class="disabled">BEST SELLING</li>
-            <li class="disabled">ALPHABETICALLY, A-Z</li>
-            <li class="disabled">ALPHABETICALLY, Z-A</li>
-            <li class="disabled">PRICE, LOW TO HIGH</li>
-            <li class="disabled">PRICE, HIGH TO LOW</li>
-            <li class="disabled">DATE, OLD TO NEW</li>
-            <li class="disabled">DATE, NEW TO OLD</li>
-          </ul>
-          
-          <ul id="filterMenu" class="control_menu hidden">
-            <li class="selected">DEFAULT</li>
-            <li class="disabled">PRE-BUILD</li>
-            <li class="disabled">NAREBONES</li>
-            <li class="disabled">KEYBOARD KIT</li>
-            <li class="disabled">MACRO PAD</li>
-            <li class="disabled">SPLIT/ERGONOMIC</li>
-          </ul>
-          
-          <div id="subDivider" class="sub_divider hidden"></div>
+        </section>
 
+        <br>
 
-          <div class="arrival_grid">
-            <article class="product_card">
-              <div class="card_img_wrapper">
-                <img src="arduinopromicro.jpg">
-              </div>
-              <h3 class="product_name">Arduino Pro Micro</h3>
-              <p class="product_price">$8.50</p>
-              <a class="button learn_more" href="productpage_4.html">LEARN MORE</a>
-              <button class="button add_to_cart" product_id="4">ADD TO CART</button>
-            </article>
+        <div class="buy_row">
 
-            <article class="product_card">
-              <div class="card_img_wrapper">
-                <img src="genuinecherrystabilizer.jpg">
-              </div>
-              <h3 class="product_name">Genuine Cherry Stabilizer</h3>
-              <p class="product_price">$2.00</p>
-              <a class="button learn_more" href="productpage_5.html">LEARN MORE</a>
-              <button class="button add_to_cart" product_id="5">ADD TO CART</button>
-            </article>
-
-            <article class="product_card">
-              <div class="card_img_wrapper">
-                <img src="holographicsticker.jpg">
-              </div>
-              <h3 class="product_name">Holographic Sticker</h3>
-              <p class="product_price">$2.00</p>
-              <a class="button learn_more" href="productpage_6.html">LEARN MORE</a>
-              <button class="button add_to_cart" product_id="6">ADD TO CART</button>
-            </article>
-
+          <div class="qty_box">
+            <span class="qty_num">1</span>
+            <button class="qty_plus" aria-label="add one">
+              <img src="plusicon.svg" alt="">
+            </button>
           </div>
+        
+          <button class="add_btn">ADD TO CART</button>
+        </div>
 
-          <nav class="pagination_bar">
-            <button class="page_nav prev disabled">PREVIOUS</button>
-          
-            <ol class="page_numbers">
-              <li class="page_item current"><span>1</span></li>
-            </ol>
-          
-            <button class="page_nav next disabled">NEXT</button>
-          </nav>
+
+        <section class="product_desc">
+
+          <p>The latest revision in the Sofle family! This version supports per-key and underglow LEDs. The per-key LEDs are <strong>3535 mini-e</strong>, making them easier to solder. The underglow are 5050 LEDs.</p>
+        
+          <p>Each switch hole has a Kailh MX socket, making it easy for you to swap out the switches whenever you please!</p>
+        
+          <p>It comes with encoders for both sides and knobs as well. The knobs included will likely be different to the ones pictured. I will have other options later.</p>
+        
+          <h3 class="list_heading">Everything included</h3>
+          <ul class="item_list">
+            <li>60 MX Kailh sockets</li>
+            <li>60 SMD diodes</li>
+            <li>75 3535 mini-e LEDs</li>
+            <li>2 encoders</li>
+            <li>2 encoder knobs</li>
+            <li>2 TRRS jacks</li>
+            <li>2 reset buttons</li>
+            <li>FR-4 plates acrylic OLED covers</li>
+            <li>Screws standoffs</li>
+            <li>PCBs (left right)</li>
+          </ul>
+        
+          <h3 class="list_heading">Things you’ll need to add / purchase separately</h3>
+          <ul class="item_list">
+            <li>2 microcontrollers — Pro Micro, nice!nano, or orelite c</li>
+            <li>2 OLEDs (optional)</li>
+            <li>1 TRRS cable</li>
+            <li>1 USB-C / Micro-USB cable to connect to your computer</li>
+            <li>58 MX switches</li>
+          </ul>
+        
         </section>
 
         <button id="backToTop" class="back_to_top"><img src="backtotopicon.svg">BACK TO TOP</button>
       </main>
+
+      <div class="divider"></div>
+
+      <br>
+
+      <h2 class="section_title">YOU MIGHT ALSO LIKE</h2>
+      <article class="product_card">
+        <div class="card_img_wrapper">
+          <img src="genuinecherrystabilizer.jpg">
+        </div>
+        <h3 class="product_name" style="font-size: 12px">Genuine Cherry Stabilizer</h3>
+        <p class="product_price" style="font-size: 10px">$2.00</p>
+        <a class="button learn_more" href="productpage_5.html">LEARN MORE</a>
+        <button class="button add_to_cart" product_id="5">ADD TO CART</button>
+      </article>
 
       <div class="divider"></div>
       
@@ -208,93 +222,117 @@
 
 
       <main class="page_main">
-        
         <section class="new_arrival">
-          <h2 class="section_title desktop_title">ACCESSORIES</h2>
-
-          <div class="listing_controls">
-            <button class="control_button" data-type="sort">
-              SORT
-              <img class="arrow_icon" src="arrowdown.svg">
-            </button>
-
-            <button class="control_button" data-type="filter">
-              FILTER
-              <img class="arrow_icon" src="arrowdown.svg">
-            </button>
+          <div class="product_head">
+            <div class="product_info">
+              <h2 class="section_title" style="font-size: 20px">SOFLE RGB</h2>
+              <h3 class="product_price" style="font-size: 20px">$75.00</h3>
+            </div>
+          
+            <div class="listing_controls">
+              <button class="control_button" data-type="sort">
+                TYPE <img class="arrow_icon" src="arrowdown.svg">
+              </button>
+              <button class="control_button" data-type="filter">
+                COLOR <img class="arrow_icon" src="arrowdown.svg">
+              </button>
+            </div>
           </div>
-
+  
           <div class="divider"></div>
-          
-          <ul id="sortMenuDesktop" class="control_menu hidden">
+  
+          <ul id="sortMenu" class="control_menu hidden">
             <li class="selected">DEFAULT</li>
-            <li class="disabled">BEST SELLING</li>
-            <li class="disabled">ALPHABETICALLY, A-Z</li>
-            <li class="disabled">ALPHABETICALLY, Z-A</li>
-            <li class="disabled">PRICE, LOW TO HIGH</li>
-            <li class="disabled">PRICE, HIGH TO LOW</li>
-            <li class="disabled">DATE, OLD TO NEW</li>
-            <li class="disabled">DATE, NEW TO OLD</li>
           </ul>
           
-          <ul id="filterMenuDesktop" class="control_menu hidden">
+          <ul id="filterMenu" class="control_menu hidden">
             <li class="selected">DEFAULT</li>
-            <li class="disabled">PRE-BUILD</li>
-            <li class="disabled">NAREBONES</li>
-            <li class="disabled">KEYBOARD KIT</li>
-            <li class="disabled">MACRO PAD</li>
-            <li class="disabled">SPLIT/ERGONOMIC</li>
           </ul>
           
-          <div id="subDividerDesktop" class="sub_divider hidden"></div>
-    
-          <div class="arrival_grid">
-            <article class="product_card">
-              <div class="card_img_wrapper">
-                <img src="arduinopromicro.jpg" alt="May Pad">
-              </div>
-              <h3 class="product_name">Arduino Pro Micro</h3>
-              <p class="product_price">$8.5.00</p>
-              <a class="button learn_more" href="productpage_4.html">LEARN MORE</a>
-              <button class="button add_to_cart" product_id="4">ADD TO CART</button>
-            </article>
+          <div id="subDivider" class="sub_divider hidden"></div>
+  
+          <br>
+  
+  
+          <section class="product_gallery">
+            <figure class="main_frame">
+              <img id="mainImgDesktop" src="solfergb.jpg" class="main_img">
+            </figure>
+            <ul class="thumb_strip">
+              <li><img src="solfergb.jpg" data-full="solfergb.jpg" alt=""></li>
+              <li><img src="soflergb_2.jpg" data-full="soflergb_2.jpg" alt=""></li>
+              <li><img src="soflergb_3.jpg" data-full="soflergb_3.jpg" alt=""></li>
+              <li><img src="soflergb_4.jpg" data-full="soflergb_4.jpg" alt=""></li>
+              <li><img src="soflergb_5.jpg" data-full="soflergb_5.jpg" alt=""></li>
+            </ul>
+          </section>
 
-            <article class="product_card">
-              <div class="card_img_wrapper">
-                <img src="genuinecherrystabilizer.jpg">
-              </div>
-              <h3 class="product_name">Genuine Cherry Stabilizer</h3>
-              <p class="product_price">$2.00</p>
-              <a class="button learn_more" href="productpage_5.html">LEARN MORE</a>
-              <button class="button add_to_cart" product_id="5">ADD TO CART</button>
-            </article>
-    
-            <article class="product_card">
-              <div class="card_img_wrapper">
-                <img src="holographicsticker.jpg" alt="Genuine Cherry Stabiliser">
-              </div>
-              <h3 class="product_name">Holographic Sticker</h3>
-              <p class="product_price">$2.00</p>
-              <a class="button learn_more" href="productpage_6.html">LEARN MORE</a>
-              <button class="button add_to_cart" product_id="6">ADD TO CART</button>
-            </article>
-    
+          <div class="buy_row">
+            <div class="qty_box">
+              <span class="qty_num" style="font-size: 15px">1</span>
+              <button class="qty_plus" aria-label="add one">
+                <img src="plusicon.svg" alt="">
+              </button>
+            </div>
+            <button class="add_btn" style="font-size: 15px">ADD TO CART</button>
           </div>
         </section>
 
-        <nav class="pagination_bar">
-          <button class="page_nav prev disabled">PREVIOUS</button>
-        
-          <ol class="page_numbers">
-            <li class="page_item current"><span>1</span></li>
-          </ol>
-        
-          <button class="page_nav next disabled">NEXT</button>
-        </nav>
+        <section class="product_desc">
 
+          <p style="font-size: 17px">The latest revision in the Sofle family! This version supports per-key and underglow LEDs. The per-key LEDs are <strong>3535 mini-e</strong>, making them easier to solder. The underglow are 5050 LEDs.</p>
+        
+          <p style="font-size: 17px">Each switch hole has a Kailh MX socket, making it easy for you to swap out the switches whenever you please!</p>
+        
+          <p style="font-size: 17px">It comes with encoders for both sides and knobs as well. The knobs included will likely be different to the ones pictured. I will have other options later.</p>
+        
+          <h3 class="list_heading">Everything included</h3>
+          <ul class="item_list">
+            <li>60 MX Kailh sockets</li>
+            <li>60 SMD diodes</li>
+            <li>75 3535 mini-e LEDs</li>
+            <li>2 encoders</li>
+            <li>2 encoder knobs</li>
+            <li>2 TRRS jacks</li>
+            <li>2 reset buttons</li>
+            <li>FR-4 plates acrylic OLED covers</li>
+            <li>Screws standoffs</li>
+            <li>PCBs (left right)</li>
+          </ul>
+        
+          <h3 class="list_heading">Things you’ll need to add / purchase separately</h3>
+          <ul class="item_list">
+            <li>2 microcontrollers — Pro Micro, nice!nano, or orelite c</li>
+            <li>2 OLEDs (optional)</li>
+            <li>1 TRRS cable</li>
+            <li>1 USB-C / Micro-USB cable to connect to your computer</li>
+            <li>58 MX switches</li>
+          </ul>
+          <br>
+        
+        </section>
+
+
+
+        <div class="divider"></div>
+
+        <br>
+        <h2 class="section_title" style="font-size: 20px">YOU MIGHT ALSO LIKE</h2>
+        <article class="product_card">
+          <div class="card_img_wrapper">
+            <img src="genuinecherrystabilizer.jpg">
+          </div>
+          <h3 class="product_name" style="font-size: 20px">Genuine Cherry Stabilizer</h3>
+          <p class="product_price" style="font-size: 20px">$2.00</p>
+          <a class="button learn_more" href="productpage_5.html" style="font-size: 15px">LEARN MORE</a>
+          <button class="button add_to_cart" product_id="5" style="font-size: 15px">ADD TO CART</button>
+        </article>
+
+        <br>
+        <br>
     
         <button id="backToTop" class="back_to_top">
-          <img src="backtotopicon.svg" alt="">BACK TO TOP
+          <img src="backtotopicon.svg">BACK TO TOP
         </button>
       </main>
     </div>
