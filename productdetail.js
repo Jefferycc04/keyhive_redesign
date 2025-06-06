@@ -14,3 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  document.querySelectorAll('.buy_row').forEach(row => {
+    const plusBtn = row.querySelector('.qty_plus');
+    const numSpan = row.querySelector('.qty_num');
+
+    if (!plusBtn || !numSpan) return;  
+
+    plusBtn.addEventListener('click', () => {
+      numSpan.textContent = Number(numSpan.textContent || 1) + 1;
+    });
+  });
+
+});
