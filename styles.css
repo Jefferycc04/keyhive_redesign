@@ -39,6 +39,8 @@ body {
 
 .page_main {
     padding: 1rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .featured_wrapper {
@@ -146,12 +148,6 @@ body {
     font-size: 15px;
     letter-spacing: 2px;
     padding-bottom: 0.5rem;
-}
-
-.arrival_grid {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 0;
 }
 
 .card_img_wrapper {
@@ -373,6 +369,9 @@ body {
     font-family: Tiny5;
     font-size: 10px;
     padding: 5px 0;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
 }
 
 .control_button[data-type="sort"] {
@@ -441,6 +440,9 @@ body {
 .arrival_grid {
     grid-template-columns: repeat(2, 1fr);
     margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 0;
 }
 
 .arrival_grid.vertical {
@@ -525,12 +527,6 @@ body {
 
 .product_head+.divider {
     margin-top: 0;
-}
-
-.control_button {
-    height: 30px;
-    align-items: center;
-    justify-content: center;
 }
 
 .product_gallery {
@@ -836,7 +832,6 @@ textarea.contact_input {
     text-decoration: underline;
 }
 
-
 .qty_box_cart {
     display: flex;
     align-items: center;
@@ -1016,6 +1011,40 @@ textarea.contact_input {
     color: #212121;
 }
 
+.order_summary {
+    font-family:Tiny5;
+    font-size:28px;
+    color:#FDB447;
+}
+
+.checkout_main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.checkout_main_desktop {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.order_summary_desktop {
+    font-family: Tiny5;
+    font-size: 32px;
+    color: #FDB447;
+}
+
+.button,
+.featured_button,
+.back_to_page,
+.back_to_top {
+    cursor: pointer;
+}
+
+.back_to_top {
+    cursor: pointer;
+}
+
 @media screen and (min-width:1368px) {
     .desktop_header {
         position: relative;
@@ -1063,15 +1092,6 @@ textarea.contact_input {
         background: #FDB447;
         color: #F5F5F5;
         padding: 1px 5px;
-    }
-
-    .page_main {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .featured_wrapper {
-        align-items: center;
     }
 
     .featured_image {
@@ -1504,6 +1524,4 @@ textarea.contact_input {
         width: 100px;
         font-size: 15px;
     }
-    
 }
-

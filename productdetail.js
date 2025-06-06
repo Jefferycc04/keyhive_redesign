@@ -1,31 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
+
   document.querySelectorAll('.product_gallery').forEach(gallery => {
-    const mainImg = gallery.querySelector('.main_img');       
-    const thumbs  = gallery.querySelectorAll('.thumb_strip img'); 
-
-    thumbs.forEach(thumb => {
-      thumb.addEventListener('click', () => {
-
-        mainImg.src = thumb.dataset.full;
-
-        thumbs.forEach(t => t.classList.remove('active'));
-        thumb.classList.add('active');
-      });
-    });
+    const main = gallery.querySelector('.main_img');
+    const thumbs = gallery.querySelectorAll('.thumb_strip img');
+    thumbs.forEach(th =>
+      th.addEventListener('click', () => {
+        main.src = th.dataset.full;
+        thumbs.forEach(x => x.classList.toggle('active', x === th));
+      })
+    );
   });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.buy_row').forEach(row => {
-    const plusBtn = row.querySelector('.qty_plus');
-    const numSpan = row.querySelector('.qty_num');
-
-    if (!plusBtn || !numSpan) return;  
-
-    plusBtn.addEventListener('click', () => {
-      numSpan.textContent = Number(numSpan.textContent || 1) + 1;
-    });
+    const plus = row.querySelector('.qty_plus');
+    const num  = row.querySelector('.qty_num');
+    if (!plus || !num) return;
+    plus.addEventListener('click',
+      () => (num.textContent = Number(num.textContent || 1) + 1));
   });
 
 });
