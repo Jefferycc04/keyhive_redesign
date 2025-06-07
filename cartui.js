@@ -1,4 +1,4 @@
-
+/* Portions of this code were generated with the assistance of ChatGPT. */
 import { CartStore } from './cartstore.js'; 
 
 function grab(ids) {
@@ -10,8 +10,8 @@ function grab(ids) {
   return arr;
 }
 var containers = grab(['cartContainer', 'cartContainerDesktop']);
-var emptyMsgs  = grab(['emptyMsg', 'emptyMsgDesktop']);
-var chkBtns    = grab(['checkoutBtn', 'checkoutBtnDesktop']);
+var emptyMsgs = grab(['emptyMsg', 'emptyMsgDesktop']);
+var chkBtns = grab(['checkoutBtn', 'checkoutBtnDesktop']);
 
 function render(list) {
 

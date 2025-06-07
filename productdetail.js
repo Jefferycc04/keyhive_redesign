@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
   document.querySelectorAll('.product_gallery').forEach(gallery => {
     const main = gallery.querySelector('.main_img');
     const thumbs = gallery.querySelectorAll('.thumb_strip img');
@@ -18,5 +17,4 @@ document.addEventListener('DOMContentLoaded', () => {
     plus.addEventListener('click',
       () => (num.textContent = Number(num.textContent || 1) + 1));
   });
-
 });

@@ -1,3 +1,4 @@
+/* Portions of this code were generated with the assistance of ChatGPT. */
 import { products }  from './products.js';
 import { CartStore } from './cartstore.js';
 
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function handleAdd(e) {
   var btn = e.currentTarget;
-  var id  = btn.dataset.productId ? Number(btn.dataset.productId)
+  var id = btn.dataset.productId ? Number(btn.dataset.productId)
             : Number(btn.getAttribute('product_id'));
   var product = null;
   for (var i = 0; i < products.length; i++)
@@ -37,7 +38,7 @@ function handleAdd(e) {
   var row = btn.closest ? btn.closest('.buy_row') : null;
   if (row) {
     var box = row.querySelector('.qty_num');
-    var n   = box ? parseInt(box.textContent, 10) : 1;
+    var n = box ? parseInt(box.textContent, 10) : 1;
     if (!isNaN(n) && n > 0) qty = n;
   }
   if (product) CartStore.add(product, qty);

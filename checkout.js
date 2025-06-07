@@ -1,3 +1,4 @@
+/* Portions of this code were generated with the assistance of ChatGPT. */
 import { CartStore } from './cartstore.js';
 
 var mql = window.matchMedia('(min-width:1368px)');

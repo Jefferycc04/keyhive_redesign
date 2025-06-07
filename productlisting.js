@@ -1,3 +1,4 @@
+/* Portions of this code were generated with the assistance of ChatGPT. */
 document.addEventListener('DOMContentLoaded', () => {
   const desktop = matchMedia('(min-width:1368px)').matches;
   const scope = desktop ? document.querySelector('.desktop_content') : document;

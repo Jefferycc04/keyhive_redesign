@@ -1,3 +1,4 @@
+/* Portions of this code were wrote with the assistance of ChatGPT. */
 export const CartStore = {
   get: function () {
     var str = localStorage.getItem('cartItems');
